@@ -117,11 +117,11 @@ spec:
             {{- end }}
           # livenessProbe:
             # {{- include "vcagent.livenessProbe" . | nindent 12 }}
-          resources:
-            requests:
-              {{- include "vcagent.resources" .Values.agent.pod.requests | nindent 14 }}
-            limits:
-              {{- include "vcagent.resources" .Values.agent.pod.limits | nindent 14 }}
+          # resources:
+            # requests:
+              # {{- include "vcagent.resources" .Values.agent.pod.requests | nindent 14 }}
+            # limits:
+              # {{- include "vcagent.resources" .Values.agent.pod.limits | nindent 14 }}
           ports:
             - containerPort: 42699
         {{- if not .Values.kubernetes.deployment.enabled }}
