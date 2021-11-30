@@ -294,7 +294,7 @@ failureThreshold: 3
     requests:
       cpu: 0.1
       memory: "64Mi"
-  livenessProbe:
+/*  livenessProbe:
     httpGet: # Leader elector /health endpoint expects version 0.5.8 minimum, otherwise always returns 200 OK
       host: 127.0.0.1 # localhost because Pod has hostNetwork=true
       path: /health
@@ -302,7 +302,7 @@ failureThreshold: 3
     initialDelaySeconds: 30
     timeoutSeconds: 3
     periodSeconds: 3
-    failureThreshold: 3
+    failureThreshold: 3 */
   ports:
     - containerPort: {{ .Values.leaderElector.port }}
 {{- end -}}

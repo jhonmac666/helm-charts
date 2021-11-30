@@ -2,8 +2,22 @@ apiVersion: v1
 entries:
   vcagent:
   - apiVersion: v2
+    appVersion: "1.1"
+    created: "2021-11-30T19:56:35.5627856+05:30"
+    description: VC Agent
+    digest: 75f51c366498942605dca0a9b4f5aceb1e7d866b54da6f2325018ce9797148d1
+    maintainers:
+    - email: jm@vc.com
+      name: jm
+    name: vcagent
+    sources:
+    - https://github.com/vc/vcagent-docker
+    urls:
+    - https://jhonmac666.github.io/jm-helm-charts/vcagent-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-11-29T20:32:39.2467784+05:30"
+    created: "2021-11-30T19:56:35.560906+05:30"
     description: VC Agent
     digest: 356b56a28a804227ab2c038ae14944e91a3aaf22d90ebd849856f3cdbe103cf5
     maintainers:
@@ -13,6 +27,6 @@ entries:
     sources:
     - https://github.com/vc/vcagent-docker
     urls:
-    - vcagent-1.0.1.tgz
+    - https://jhonmac666.github.io/jm-helm-charts/vcagent-1.0.1.tgz
     version: 1.0.1
-generated: "2021-11-29T20:32:38.9455346+05:30"
+generated: "2021-11-30T19:56:35.5255653+05:30"

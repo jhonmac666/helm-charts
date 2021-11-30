@@ -115,8 +115,8 @@ spec:
               subPath: configuration-prometheus-remote-write.yaml
               mountPath: /opt/vc/agent/etc/vc/configuration-prometheus-remote-write.yaml
             {{- end }}
-          livenessProbe:
-            {{- include "vcagent.livenessProbe" . | nindent 12 }}
+          # livenessProbe:
+            # {{- include "vcagent.livenessProbe" . | nindent 12 }}
           resources:
             requests:
               {{- include "vcagent.resources" .Values.agent.pod.requests | nindent 14 }}
