@@ -267,17 +267,6 @@ Composes a container image from a dict containing a "name" field (required), "ta
 {{- end }}
 {{- end -}}
 
-{{- define "vcagent.livenessProbe" -}}
-httpGet:
-  host: 127.0.0.1 # localhost because Pod has hostNetwork=true
-  path: /status
-  port: 42699
-initialDelaySeconds: 300 # startupProbe isnt available before K8s 1.16
-timeoutSeconds: 3
-periodSeconds: 10
-failureThreshold: 3
-{{- end -}}
-
 {{- define "leader-elector.container" -}}
 - name: leader-elector
   image: {{ include "image" .Values.leaderElector.image | quote }}
@@ -294,15 +283,6 @@ failureThreshold: 3
     requests:
       cpu: 0.1
       memory: "64Mi"
-/*  livenessProbe:
-    httpGet: # Leader elector /health endpoint expects version 0.5.8 minimum, otherwise always returns 200 OK
-      host: 127.0.0.1 # localhost because Pod has hostNetwork=true
-      path: /health
-      port: {{ .Values.leaderElector.port }}
-    initialDelaySeconds: 30
-    timeoutSeconds: 3
-    periodSeconds: 3
-    failureThreshold: 3 */
   ports:
     - containerPort: {{ .Values.leaderElector.port }}
 {{- end -}}
