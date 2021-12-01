@@ -278,7 +278,7 @@ Composes a container image from a dict containing a "name" field (required), "ta
   command:
     - "/sh"
     - "-c"
-    - "while true; do ;echo " --election=vc --id=$(VC_AGENT_POD_NAME)"sleep 2; done"
+    - "while true; do ; sleep 15; done"
   resources:
     requests:
       cpu: 0.1
