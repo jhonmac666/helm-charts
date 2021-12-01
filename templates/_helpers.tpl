@@ -276,9 +276,9 @@ Composes a container image from a dict containing a "name" field (required), "ta
         fieldRef:
           fieldPath: metadata.name
   command:
-    - "/busybox/sh"
+    - "/sh"
     - "-c"
-    - "sleep 12 && /app/server --election=vc --http=localhost:{{ .Values.leaderElector.port }} --id=$(VC_AGENT_POD_NAME)"
+    - "while true; do ;echo " --election=vc --id=$(VC_AGENT_POD_NAME)"sleep 2; done"
   resources:
     requests:
       cpu: 0.1

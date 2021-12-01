@@ -3,9 +3,9 @@ entries:
   vcagent:
   - apiVersion: v2
     appVersion: "1.1"
-    created: "2021-11-30T20:52:53.9138605+05:30"
+    created: "2021-12-01T20:26:44.8765098+05:30"
     description: VC Agent
-    digest: 7cca8e25082425b11f51b69c2809030717c1604ea75fcbe111ae3513aa4a75d6
+    digest: 17fd38f25c588f98cf5bc822bdc86ebaa78ed7868d4daaa932307baf837e1508
     maintainers:
     - email: jm@vc.com
       name: jm
@@ -17,7 +17,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-11-30T20:52:53.911083+05:30"
+    created: "2021-12-01T20:26:44.8735104+05:30"
     description: VC Agent
     digest: 356b56a28a804227ab2c038ae14944e91a3aaf22d90ebd849856f3cdbe103cf5
     maintainers:
@@ -29,4 +29,4 @@ entries:
     urls:
     - https://jhonmac666.github.io/jm-helm-charts/vcagent-1.0.1.tgz
     version: 1.0.1
-generated: "2021-11-30T20:52:53.9099663+05:30"
+generated: "2021-12-01T20:26:44.8715099+05:30"
